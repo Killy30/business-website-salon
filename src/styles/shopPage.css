@@ -1,0 +1,52 @@
+.shop_page_container {
+    width: 100%;
+    padding: 70px 0px;
+    background-color: #ffedf6;
+
+    .shop_title_box {
+        width: 100%;
+        padding: 50px 10%;
+
+        h2 {
+            font-family: 'libre-baskerville';
+            font-size: 50px;
+            /* text-transform: uppercase; */
+        }
+    }
+
+    .shop_body_box {
+        width: 100%;
+        padding: 70px 10%;
+        background-color: #fff;
+
+        .items_box {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+
+        }
+    }
+
+    @media (max-width: 640px) {
+        .shop_title_box {
+            padding: 40px 20px;
+
+            h2 {
+                font-size: clamp(2rem, 4vw, 5rem);
+            }
+        }
+
+        .shop_body_box {
+            padding: 50px 20px;
+
+            .items_box {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+    }
+
+}

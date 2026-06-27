@@ -1,0 +1,151 @@
+.slider_container {
+    width: 100%;
+    height: 100dvh;
+    /* background-color: #3d2531; */
+    padding-top: 70px;
+    position: relative;
+
+    @media (max-width: 640px) {}
+
+    .carousel-inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-control-prev {
+        z-index: 3000;
+    }
+
+    .carousel-control-next {
+        z-index: 3000;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+            /* opacity: 0.2; */
+        }
+    }
+
+    .carousel-caption {
+        height: calc(100% - 70px);
+        display: flex;
+        align-items: center;
+
+        .text_slider_box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .text_slider_card {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            /* background-color: #ff0084; */
+            padding: 30px;
+            /* backdrop-filter: blur(10px); */
+            /* z-index: 2000; */
+            /* border: 1px solid #111; */
+            /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px; */
+        }
+
+        .card_title_slider {
+            width: 100%;
+            display: block;
+            align-items: center;
+        }
+
+        h2 {
+            font-family: 'libre-baskerville';
+            font-size: clamp(2rem, 7vw, 5rem);
+            font-weight: 700;
+            margin: 0px;
+            /* color: #ff0084; */
+            color: #ffffff;
+            display: block;
+            /* border-bottom: 2px solid #ff0084; */
+        }
+
+        .card_subtitle_slider {
+            width: 90%;
+            text-align: center;
+
+            p {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: clamp(1rem, 2vw, 1rem);
+                color: #ffffff;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+        }
+
+    }
+}
+
+
+/* From Uiverse.io by alexmaracinaru */ 
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  /* background: #b1dae7; */
+  background: #ff0084;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #ffffff;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #ff0084;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}

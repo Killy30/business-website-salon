@@ -1,0 +1,98 @@
+.my_cart_body {
+    width: 100%;
+
+    .table_box{
+        width: 100%;
+    }
+
+    .table {
+        width: 100%;
+
+        th {
+            font-family: 'libre-baskerville';
+            font-size: 20px;
+        }
+
+        td {
+            /* text-align: center; */
+            vertical-align: middle;
+            font-family: 'libre-baskerville';
+            color: #4c4c4c;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        
+        table thead tr,
+        tbody tr {
+            display: table;
+            width: 750px;
+            table-layout: fixed;
+        }
+        
+        .table_box{
+            overflow: hidden !important;
+            overflow-x: scroll !important;
+        }
+
+    }
+}
+
+.card_img_product_cart {
+    width: 60px;
+    height: 70px;
+    overflow: hidden;
+    margin-right: 30px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.add_remove_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* padding: 5px; */
+    border: 1px solid #5555;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            padding-top: 8px !important;
+
+        }
+    }
+}
+
+.tfoot_card {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 70px;
+
+    .card_yxc {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 0px;
+    }
+
+    span {
+        font-family: 'libre-baskerville';
+        font-size: 20px;
+    }
+
+    strong {
+        font-family: 'libre-baskerville';
+        font-size: 25px;
+    }
+
+    @media (max-width: 640px) {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}

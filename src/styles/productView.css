@@ -1,0 +1,38 @@
+
+
+.product_view{
+    width: 100%;
+    background-color: #fff;
+    padding: 60px 7%;
+
+    .product_container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        @media (max-width: 640px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 25px;
+        }
+
+        .product_img_card{
+            width: 100%;
+            /* border: 1px solid #999; */
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .product_info{
+
+            h2{
+                font-family: 'libre-baskerville';
+                font-weight: 600;
+                font-size: 45px;
+            }
+        }
+    }
+}
