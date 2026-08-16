@@ -1,0 +1,45 @@
+
+.appt_ad_contents{
+    width: 100%;
+    height: 500px;
+    background-color: #ad0054;
+    padding: 2rem;
+    margin-top: 7rem;
+
+    .appt_ad_box{
+        width: 100%;
+        height: 100%;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+
+        .contents_appt{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 2rem;
+
+            h2{
+                color: #fff;
+                font-size:  clamp(2rem, 4vw, 5rem);
+                font-family: 'libre-baskerville';
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+
+            p{
+                color: #fff;
+                font-size:  clamp(1rem, 1vw, 1rem);
+            }
+
+            a{
+                padding: 20px;
+                background-color: #fff;
+                text-decoration: none;
+                color: #ff007b;
+            }
+        }
+    }
+}

@@ -7,31 +7,23 @@ import ShopPreview from '../layouts/ShopPreview'
 import Coments from '../layouts/Coments'
 import Contact from '../layouts/Contact'
 import Footer from '../layouts/Footer'
+import Comentsx from '../layouts/Comentsx'
+import ApptAd from '../layouts/ApptAd'
+
 
 function MainPage() {
     return (
         <>
             <main className='main_container'>
-                <section>
-                    <Slider />
-                </section>
-                <section id='about-section' className='margin_side'>
-                    <About />
-                </section>
-                <section id='service-section'>
-                    <Services />
-                </section>
-                <section>
-                    <ShopPreview />
-                </section>
-                <section>
-                    <Coments />
-                </section>
-                <section id='contact-section'>
-                    <Contact />
-                </section>
+                <Slider />
+                <About />
+                <Services />
+                <ShopPreview />
+                <ApptAd />
+                <Comentsx />
+                <Contact />
             </main>
-            <Footer/>
+            <Footer />
         </>
     )
 }

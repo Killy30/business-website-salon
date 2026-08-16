@@ -1,10 +1,9 @@
-
-.about_container{
+.about_container {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 7rem;
 }
 
-.about_box{
+.about_box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
@@ -14,25 +13,25 @@
         gap: 25px;
     }
 
-    .about_img_box{
+    .about_img_box {
         width: 100%;
         height: 100%;
         overflow: hidden;
         border-radius: 50%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-        img{
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
 
-    .about_text_box{
+    .about_text_box {
         display: flex;
         align-items: center;
 
-        h2{
+        h2 {
             font-family: 'libre-baskerville';
             font-size: clamp(2rem, 4vw, 5rem);
             /* font-weight: 600; */
@@ -42,7 +41,7 @@
             border-bottom: 1px solid #7777;
         }
 
-        h3{
+        h3 {
             font-family: 'libre-baskerville';
             font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 600;
@@ -50,8 +49,8 @@
 
         }
 
-        p{
-            font-size: clamp(1rem, 2vw, 1.1rem);
+        p {
+            font-size: clamp(1rem, 1vw, 1rem);
         }
     }
 }

@@ -17,19 +17,21 @@ function ShopPreview() {
     }, [])
 
     return (
-        <div className='shopPreview_container'>
-            <div className='shopPreview_box'>
-                <div className='s_title'>
-                    <h3>Artículos recientes</h3>
+        <section>
+            <div className='shopPreview_container'>
+                <div className='shopPreview_box'>
+                    <div className='s_title'>
+                        <h3>Artículos recientes</h3>
+                    </div>
+                    <div className='s_body'>
+                        <ProductsList products={preductsPreview} />
+                    </div>
                 </div>
-                <div className='s_body'>
-                    <ProductsList products={preductsPreview}/>
+                <div className='see_more_card'>
+                    <Link to={'/tienda'}>Ver mas articulos</Link>
                 </div>
             </div>
-            <div className='see_more_card'>
-                <Link to={'/tienda'}>Ver mas articulos</Link>
-            </div>
-        </div>
+        </section>
     )
 }
 

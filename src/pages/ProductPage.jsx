@@ -24,7 +24,7 @@ function ProductPage() {
     }
 
     useEffect(() => {
-        console.log('recargarse');
+        
     }, [])
 
     useEffect(() => {
@@ -41,7 +41,7 @@ function ProductPage() {
                     <div className="product_view">
                         <div className='product_container'>
                             <div className='product_img_card'>
-                                <img src={`${import.meta.env.VITE_URL_PUBLIC_NAME}/${product?.img}`} alt="" />
+                                <img src={`${import.meta.env.VITE_URL_NAME}/${product?.img}`} alt="" />
                             </div>
                             <div className='product_info'>
                                 <div>
@@ -51,11 +51,11 @@ function ProductPage() {
                                     <div className='mb-3'>
                                         <div className='star'>
                                             <div>
-                                                <span class="material-symbols-outlined">star</span>
-                                                <span class="material-symbols-outlined">star</span>
-                                                <span class="material-symbols-outlined">star</span>
-                                                <span class="material-symbols-outlined">star</span>
-                                                <span class="material-symbols-outlined">star</span>
+                                                <span className="material-symbols-outlined">star</span>
+                                                <span className="material-symbols-outlined">star</span>
+                                                <span className="material-symbols-outlined">star</span>
+                                                <span className="material-symbols-outlined">star</span>
+                                                <span className="material-symbols-outlined">star</span>
                                                 {/* <span className='ms-2'>(Calificacion)</span> */}
                                             </div>
                                         </div>
@@ -80,27 +80,27 @@ function ProductPage() {
                             </div>
                         </div>
                         <div className='mt-5 mb-5'>
-                            <ul class="nav nav-underline" id="" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Descripcion</button>
+                            <ul className="nav nav-underline" id="" role="tablist">
+                                <li className="nav-item" role="presentation">
+                                    <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Descripcion</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Review</button>
+                                <li className="nav-item" role="presentation">
+                                    <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Review</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Info</button>
+                                <li className="nav-item" role="presentation">
+                                    <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Info</button>
                                 </li>
                             </ul>
-                            <div class="tab-content" id="myTabContent">
+                            <div className="tab-content" id="myTabContent">
                                 <div className="tab-pane fade show active mt-4" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
                                     <p>{product?.aditional_desc}</p>
                                 </div>
-                                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-                                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+                                <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabIndex="0">...</div>
+                                <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabIndex="0">...</div>
                             </div>
                         </div>
                         <div className='mt-5'>
-                            <div className='mb-5 mt-5'>
+                            <div className='mb-5 mt-5 border-bottom'>
                                 <h3>Productos similares</h3>
                             </div>
                             <ProductsList products={similarProducts} />

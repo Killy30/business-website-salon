@@ -3,7 +3,8 @@ import '../styles/footer.css'
 import { Outlet } from 'react-router-dom'
 
 function Footer() {
-    return(
+
+    return (
         <>
             <div className='footer_container'>
                 <div className='footer_content'>

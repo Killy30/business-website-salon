@@ -4,72 +4,10 @@
     padding-right: 15%;
     margin-top: 150px;
 
-    .coments_header {
-        .title_one {
-            width: 100%;
-            text-align: center;
-
-            span {
-                text-transform: uppercase;
-            }
-        }
-
-        .title_two {
-            width: 100%;
-
-            h2 {
-                text-align: center;
-                text-transform: uppercase;
-                font-family: 'libre-baskerville';
-                font-size: clamp(2rem, 4vw, 5rem);
-            }
-        }
-    }
+    
 
     .coments_body {
         margin-top: 80px;
-
-        .coment_card {
-            width: 100%;
-            /* border: 1px solid #cacaca; */
-            padding: 40px 60px;
-            background-color: #ffdeee;
-
-            .coment_card_header {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                margin-bottom: 15px;
-
-                .img_user {
-                    width: 80px;
-                    height: 80px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    /* display: flex; */
-                    justify-self: center;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-
-                span {
-                    font-size: 22px;
-                    font-weight: 500;
-                    border-bottom: 1px solid #343434;
-                }
-            }
-
-            .coment_card_body {
-
-                p {
-                    font-size: clamp(1rem, 2vw, 2rem);
-                }
-            }
-        }
 
         .coments_btns_box {
             width: 100%;

@@ -13,7 +13,6 @@ export function ApiRequestProvider({ children }) {
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(false)
     const [productLoading, setProductLoading] = useState(false)
-    const [num, setNum] = useState(12533)
 
     const getProducts = async () => {
         try {
@@ -31,25 +30,32 @@ export function ApiRequestProvider({ children }) {
 
     const getProduct = async (id) => {
         try {
-            setProductLoading(true)
-            if(id){
-                const productx = products.find(product => product.id == id)
-                setProduct(productx)
-            }else{
+            if (id) {
+                console.log('entro');
+
+                setProductLoading(true)
+
+                const timer = setTimeout(() => {
+                    const productx = products.find(product => product.id == id)
+                    setProduct(productx)
+                    setProductLoading(false)
+
+                }, 200);
+                
+                return () => clearTimeout(timer);
+            } else {
                 throw new Error('El id del producto no existe...')
             }
-            setProductLoading(false)
         } catch (error) {
             console.error(error)
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         getProducts()
-    },[])
+    }, [])
 
     return (<ApiRequestContext.Provider value={{
-        num,
         products,
         product,
         loading,

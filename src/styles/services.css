@@ -1,18 +1,17 @@
-
-.services_container{
+.services_container {
     width: 100%;
     padding-left: 4%;
     padding-right: 4%;
     padding-top: 90px;
     padding-bottom: 90px;
-    margin-top: 200px;
+    margin-top: 7rem;
     background-color: #ffdeee;
 
-    .services_title_box{
+    .services_title_box {
         width: 100%;
         margin-bottom: 70px;
 
-        h2{
+        h2 {
             font-family: 'libre-baskerville';
             font-size: clamp(2rem, 4vw, 5rem);
             text-align: center;
@@ -20,26 +19,28 @@
         }
     }
 
-    .services_box{
+    .services_box {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        gap: 30px;
 
         @media (max-width: 640px) {
             grid-template-columns: repeat(1, 1fr);
-            gap: 10px;
+            gap: 50px;
         }
     }
 
-    .service_card{
-        .service_content{
+    .service_card {
+        .service_content {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .img{
+
+        .img {
             /* width: 250px; */
+            max-width: 230px;
             height: 250px;
             margin-bottom: 30px;
             background-color: #fff;
@@ -48,22 +49,28 @@
             border-top-left-radius: 50% 70%;
             border-top-right-radius: 50% 70%;
             border-bottom-right-radius: 50% 40%;
-            border-bottom-left-radius: 50% 40%; 
-            
-            img{
+            border-bottom-left-radius: 50% 40%;
+
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
         }
-        .description{
+
+        .description {
             text-align: center;
             display: flex;
             flex-direction: column;
 
-            .service_title{
+            .service_title {
                 font-family: 'libre-baskerville';
-                font-size: 25px;
+                font-size: 23px;
+            }
+
+            .service_desc {
+                font-size: clamp(1rem, 1vw, 1rem);
+
             }
         }
     }

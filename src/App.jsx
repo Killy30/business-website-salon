@@ -24,9 +24,9 @@ function App() {
         <MyCartProvider>
           <BrowserRouter>
             <Routes>
-              <Route element={<Header />} >
-                <Route path='/' element={<MainPage />} />
-                <Route element={<LoadingPage />}>
+              <Route element={<LoadingPage />}>
+                <Route element={<Header />} >
+                  <Route path='/' element={<MainPage />} />
                   <Route path='/tienda' element={<ShopPage />} />
                   <Route path='/producto/:id' element={<ProductPage />} />
                   <Route path='/mi-carrito' element={<MyCartPage />} />

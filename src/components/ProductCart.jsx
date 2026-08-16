@@ -10,12 +10,12 @@ function ProductCart({ item, qty, removeProductx, deleteProduct, addProduct }) {
         <tr className=''>
             <td scope="row" className='py-3'>
                 <a href="" onClick={deleteProduct} data-id={item.id}>
-                    <span class="material-symbols-outlined" data-id={item.id}>close</span>
+                    <span className="material-symbols-outlined" data-id={item.id}>close</span>
                 </a>
             </td>
             <td className='py-3 d-flex align-items-center'>
                 <div className='card_img_product_cart'>
-                    <img src={`${import.meta.env.VITE_URL_PUBLIC_NAME}/${item.img}`} alt="" />
+                    <img src={`${import.meta.env.VITE_URL_NAME}/${item.img}`} alt="" />
                 </div>
                 <span>{item.name}</span>
             </td>
@@ -24,7 +24,7 @@ function ProductCart({ item, qty, removeProductx, deleteProduct, addProduct }) {
                 <div className='add_remove_card'>
                     <div>
                         <a href="" onClick={removeProductx} data-id={item.id}>
-                            <span class="material-symbols-outlined" data-id={item.id}>remove</span>
+                            <span className="material-symbols-outlined" data-id={item.id}>remove</span>
                         </a>
                     </div>
                     <div>
@@ -32,7 +32,7 @@ function ProductCart({ item, qty, removeProductx, deleteProduct, addProduct }) {
                     </div>
                     <div>
                         <a href="" onClick={addProduct} data-id={item.id}>
-                            <span class="material-symbols-outlined" data-id={item.id}>add</span>
+                            <span className="material-symbols-outlined" data-id={item.id}>add</span>
                         </a>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import '../styles/myCartPage.css'
 
 import Footer from '../layouts/Footer';
@@ -17,7 +18,7 @@ function MyCartPage() {
         addMoreProduct,
         removeProduct,
         total,
-        theTotal
+        getTotal
     } = useMyCartContext()
 
     const removeProductx = (e) => {
@@ -41,8 +42,7 @@ function MyCartPage() {
     }
 
     useEffect(() => {
-        console.log(myCartObject);
-        theTotal()
+        getTotal()
     }, [])
 
     return (
@@ -88,7 +88,17 @@ function MyCartPage() {
                                     (Object.values(myCartObject).length > 0)
                                         ? <div></div>
                                         : <div className='w-100 text-center mt-5'>
-                                            <span className='fs-4 text-secondary'>Su carrito esta vacio!!!</span>
+                                            <div>
+                                                <span className="material-symbols-outlined fs-1 text-secondary">
+                                                    shopping_cart
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span className='fs-4 text-secondary'>Su carrito esta vacio!!!</span>
+                                            </div>
+                                            <div>
+                                                <Link to={'/tienda'}>Ver las ofertas del dia</Link>
+                                            </div>
                                         </div>
                                 }
                             </div>
@@ -99,7 +109,7 @@ function MyCartPage() {
                                             <span>Subtotal</span>
                                         </div>
                                         <div>
-                                            <span>{FormatPrice(total.toFixed(2))}</span>
+                                            <span>${FormatPrice(total.toFixed(2))}</span>
                                         </div>
                                     </div>
                                     <div className='card_yxc'>
@@ -115,7 +125,7 @@ function MyCartPage() {
                                             <strong>Total</strong>
                                         </div>
                                         <div>
-                                            <strong>{FormatPrice(total.toFixed(2))}</strong>
+                                            <strong>${FormatPrice(total.toFixed(2))}</strong>
                                         </div>
                                     </div>
                                 </div>

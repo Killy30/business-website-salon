@@ -28,7 +28,6 @@ export function MyCartProvider({ children }){
             myCart.push(item)
             setToMyCar(myCart)
             productsGroupe()
-            // theTotal()
             setLoading(false)
         } catch (error) {
             console.error(error)
@@ -39,6 +38,7 @@ export function MyCartProvider({ children }){
     function productsGroupe(){
         const objectProducts = Object.groupBy(myCart, ({ id }) => id)
         setToMyCarObject(objectProducts)
+        getTotal()
     }
 
     function deleteProductInMyCart(id){
@@ -49,10 +49,9 @@ export function MyCartProvider({ children }){
         })
         setToMyCar(myCart)
         productsGroupe()
-        theTotal()
     }
 
-    function theTotal(){
+    function getTotal(){
         const totalCost = myCart.reduce((acc, item) => acc = acc + parseFloat(item.price), 0)
         setTotal(totalCost)
     }
@@ -62,7 +61,6 @@ export function MyCartProvider({ children }){
         myCart.push(items)
         setToMyCar(myCart)
         productsGroupe()
-        theTotal()
     }
     
     function removeProduct(id){
@@ -74,7 +72,6 @@ export function MyCartProvider({ children }){
             myCart.splice(index, 1)
             setToMyCar(myCart)
             productsGroupe()
-            theTotal()
         }
     }
     
@@ -93,7 +90,7 @@ export function MyCartProvider({ children }){
             addMoreProduct,
             removeProduct,
             productsGroupe,
-            theTotal
+            getTotal
             }}>
             {children}
         </MyCartContext.Provider>
