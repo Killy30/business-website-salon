@@ -17,7 +17,7 @@ export function ApiRequestProvider({ children }) {
     const getProducts = async () => {
         try {
             setLoading(true)
-            const req = await fetch('../src/data/products.json')
+            const req = await fetch('../../data/products.json')
             const res = await req.json()
 
             setProducts(res)
