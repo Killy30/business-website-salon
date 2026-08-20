@@ -233,6 +233,7 @@
 
     .coment_card {
         width: 98%;
-        padding: 40px;
+        margin-top: 30px;
+        padding: 20px;
     }
 }

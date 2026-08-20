@@ -7,21 +7,44 @@ import '../styles/header.css'
 
 function Header() {
     const { myCart } = useMyCartContext()
-    
-    useEffect(()=>{
-        console.log(myCart);
+
+    const handleShowMenuMobile = () =>{
+        console.log('show');
+        document.querySelector('.ul_content').classList.remove('hide_menu_mobile')
+        document.querySelector('.ul_content').classList.add('show_menu_mobile')
         
-    },[])
+    }
+
+    const handleHideMenuMobile = () =>{
+        console.log('hide');
+        document.querySelector('.ul_content').classList.remove('show_menu_mobile')
+        document.querySelector('.ul_content').classList.add('hide_menu_mobile')
+        
+    }
+
+    useEffect(() => {
+        console.log(myCart);
+    }, [])
 
     return (
         <>
             <nav className='header_content'>
                 <div className='header_box'>
-                    <div className='logo_box'>
-                        <h3>Salonx</h3>
+                    <div className='box_menu_logo'>
+                        <button type='button' onClick={handleShowMenuMobile}>
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                        <div className='logo_box'>
+                            <h3>Salonx</h3>
+                        </div>
                     </div>
                     <div className='links_box'>
-                        <ul>
+                        <ul className='ul_content hide_menu_mobile'>
+                            <div className='close_menu_box'>
+                                <button type='button' onClick={handleHideMenuMobile}>
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                            </div>
                             <li>
                                 <Link to={'/'}>Inicio</Link>
                             </li>
